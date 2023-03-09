@@ -1,0 +1,31 @@
+@import '../../../global-styles/style.scss';
+
+
+.homepage-component-description {
+  width: 343px;
+
+  @include desktop {
+    width: 467px;
+  }
+
+  @include tablet {
+    width: 490px;
+  }
+
+  & h1 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0;
+    @include desktop {
+      font-size: 48px;
+    }
+    @include tablet {
+      font-size: 48px;
+    }
+  }
+
+  & p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

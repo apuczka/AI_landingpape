@@ -1,0 +1,112 @@
+@import '../../../global-styles/style.scss';
+
+
+.homepage-component-tile {
+
+  background-color: var(--color-background-tile);
+  width: 263px;
+  position: relative;
+
+  &-1,
+  &-2,
+  &-3,
+  &-4 {
+    background-color: var(--color-background-tile);
+    width: 343px;
+    height: fit-content;
+    border-radius: 20px;
+    text-align: center;
+
+    @include desktop {
+      border-radius: 24px;
+      height: auto;
+      width: 263px;
+    }
+    @include tablet {
+      height: auto;
+      width: 240px;
+    }
+
+    & h3 {
+      font-weight: 500;
+      margin-top: 104px;
+      margin-bottom: 16px;
+      position: relative;
+
+      @include tablet {
+        font-size: 20px;
+      }
+    }
+    & p {
+      opacity: 25%;
+    }
+  }
+
+  &-1 {
+    & h3::before {
+      content: url(../../../assets/globe.png);
+      position: absolute;
+      left: 140px;
+      top: -80px;
+
+      @include desktop {
+        left: 100px;
+      }
+      @include tablet {
+        left: 90px;
+      }
+    }
+  }
+
+  &-2 {
+    & h3::before {
+      content: url(../../../assets/person.png);
+      position: absolute;
+      right: 140px;
+      top: -80px;
+
+      @include desktop {
+        left: 100px;
+      }
+
+      @include tablet {
+        left: 90px;
+      }
+    }
+  }
+
+  &-3 {
+    & h3::before {
+      content: url(../../../assets/lang.png);
+      position: absolute;
+      top: -80px;
+      left: 140px;
+
+      @include desktop {
+        left: 100px;
+
+      }
+      @include tablet {
+        left: 90px;
+
+      }
+    }
+  }
+
+  &-4 {
+    & h3::before {
+      content: url(../../../assets/AI.png);
+      position: absolute;
+      top: -80px;
+      left: 140px;
+
+      @include desktop{
+        left: 100px;
+      }
+
+      @include tablet {
+        left: 90px;
+      }
+    }
+  }
+}
