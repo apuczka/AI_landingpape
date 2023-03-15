@@ -1,112 +1,111 @@
-@import '../../../global-styles/style.scss';
+@import "../../../global-styles/style.scss";
 
-
-.homepage-component-tile {
-
-  background-color: var(--color-background-tile);
-  width: 263px;
-  position: relative;
-
-  &-1,
-  &-2,
-  &-3,
-  &-4 {
+.homepage-component-right {
+  // height: 100%;
+  // margin-bottom: 64px;
+  & &__tile-1,
+  & &__tile-2,
+  & &__tile-3,
+  & &__tile-4 {
     background-color: var(--color-background-tile);
-    width: 343px;
+    max-width: 343px;
     height: fit-content;
     border-radius: 20px;
     text-align: center;
+    margin-left: 16px;
+    margin-right: 16px;
 
-    @include desktop {
-      border-radius: 24px;
-      height: auto;
-      width: 263px;
-    }
-    @include tablet {
-      height: auto;
-      width: 240px;
-    }
-
-    & h3 {
-      font-weight: 500;
-      margin-top: 104px;
-      margin-bottom: 16px;
-      position: relative;
-
-      @include tablet {
-        font-size: 20px;
-      }
-    }
-    & p {
-      opacity: 25%;
+    & h3::before {
+      position: absolute;
+      left: 140px;
+      top: -81px;
     }
   }
 
-  &-1 {
+  & &__title {
+    font-weight: 500;
+    margin-top: 104px;
+    margin-bottom: 16px;
+    position: relative;
+    font-size: 20px;
+  }
+
+  & &__tile-1 {
     & h3::before {
       content: url(../../../assets/globe.png);
-      position: absolute;
-      left: 140px;
-      top: -80px;
-
-      @include desktop {
-        left: 100px;
-      }
-      @include tablet {
-        left: 90px;
-      }
     }
   }
 
-  &-2 {
+  & &__tile-2 {
     & h3::before {
       content: url(../../../assets/person.png);
-      position: absolute;
-      right: 140px;
-      top: -80px;
-
-      @include desktop {
-        left: 100px;
-      }
-
-      @include tablet {
-        left: 90px;
-      }
     }
   }
 
-  &-3 {
+  & &__tile-3 {
     & h3::before {
       content: url(../../../assets/lang.png);
-      position: absolute;
-      top: -80px;
-      left: 140px;
-
-      @include desktop {
-        left: 100px;
-
-      }
-      @include tablet {
-        left: 90px;
-
-      }
     }
   }
 
-  &-4 {
+  & &__tile-4 {
     & h3::before {
       content: url(../../../assets/AI.png);
-      position: absolute;
-      top: -80px;
-      left: 140px;
+    }
+  }
+  & &__content {
+    margin: 16px 16px 24px 16px;
+    opacity: 25%;
+    font-size: 14px;
+    line-height: 22px;
+  }
 
-      @include desktop{
-        left: 100px;
-      }
+  @include tablet {
+    & &__tile-1,
+    & &__tile-2,
+    & &__tile-3,
+    & &__tile-4 {
+      height: auto;
+      width: 240px;
 
-      @include tablet {
+      & h3::before {
         left: 90px;
       }
     }
   }
+
+  @include desktop {
+    & &__tile-1,
+    & &__tile-2,
+    & &__tile-3,
+    & &__tile-4 {
+      border-radius: 24px;
+      height: 240px;
+      width: 268px;
+      margin-right: 0;
+      margin-left: 0;
+
+      & h3::before {
+        left: 102px;
+      }
+    }
+    & &__content {
+      font-size: 16px;
+      line-height: 24px;
+
+
+
+    }
+  }
+  // @include phone {
+  //   & &__tile-1,
+  //   & &__tile-2,
+  //   & &__tile-3,
+  //   & &__tile-4 {
+  //     & h3::before {
+  //       left: 140px;
+  //       top: -80px;
+  //     }
+  //   }
+  // }
 }

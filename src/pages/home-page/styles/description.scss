@@ -1,31 +1,39 @@
-@import '../../../global-styles/style.scss';
+@import "../../../global-styles/style.scss";
 
-
-.homepage-component-description {
-  width: 343px;
-
-  @include desktop {
-    width: 467px;
+.homepage-component-left {
+  margin-right: 16px;
+  margin-left: 16px;
+  & &__description {
+    max-width: 343px;
   }
 
-  @include tablet {
-    width: 490px;
-  }
-
-  & h1 {
+  & &__title {
     font-size: 32px;
     font-weight: 500;
     margin: 0;
-    @include desktop {
-      font-size: 48px;
+  }
+
+  & &__content {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 24px;
+  }
+
+  @include desktop {
+    & &__description {
+      max-width: 467px;
     }
-    @include tablet {
+    & &__title {
       font-size: 48px;
     }
   }
+  @include tablet {
+    & &__description {
+      width: 490px;
+    }
+    & &__title {
+      font-size: 48px;
+    }
 
-  & p {
-    font-size: 16px;
-    line-height: 24px;
   }
 }

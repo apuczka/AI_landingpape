@@ -1,28 +1,25 @@
 @import "../../../global-styles/style.scss";
 
-.homepage-component-tiles {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.homepage-component-right {
+  & &__tiles {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 64px;
 
-  @include desktop {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    grid-column-gap: 24px;
-    grid-row-gap: 31px;
+    @include desktop {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+      // grid-column-gap: 24px;
+      grid-row-gap: 21px;
 
-    // grid-template-areas:
-    // ".homepage-component-tile-1 .homepage-component-tile-2"
-    // ".homepage-component-tile-3 .homepage-component-tile-4"
-  }
-  @include tablet {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
+    }
+    @include tablet {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+    }
   }
   
-  & p {
-    margin: 16px;
-  }
 }
