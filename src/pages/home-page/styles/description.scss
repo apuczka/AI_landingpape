@@ -11,12 +11,15 @@
     font-size: 32px;
     font-weight: 500;
     margin: 0;
+    line-height: 40px;
+    letter-spacing: -.5px;
   }
 
   & &__content {
     font-size: 16px;
     line-height: 24px;
-    margin-top: 24px;
+    margin-top: 12px;
+    letter-spacing: -0.2px;
   }
 
   @include desktop {
@@ -25,14 +28,26 @@
     }
     & &__title {
       font-size: 48px;
+      line-height: 56px;
+    }
+    & &__content {
+      margin-top: 23px;
+      margin-right: 10px;
     }
   }
   @include tablet {
+    margin-left: 0;
+    margin-right: 0;
     & &__description {
-      width: 490px;
+      max-width: 491px;
     }
     & &__title {
       font-size: 48px;
+      line-height: 56px;
+
+    }
+    & &__content {
+      margin-top: 16px;
     }
 
   }
