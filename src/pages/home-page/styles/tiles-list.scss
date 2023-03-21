@@ -11,9 +11,9 @@
       display: grid;
       grid-template-columns: 50% 50%;
       grid-template-rows: 50% 50%;
-      // grid-column-gap: 24px;
+      grid-column-gap: 15px;
       grid-row-gap: 21px;
-      gap: 12px;
+      // gap: 12px;
 
     }
     @include tablet {
